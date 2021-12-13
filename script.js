@@ -58,6 +58,27 @@ function generatePassword() {
     console.log('passwordArray at Uppercase', passwordArray);
   }
 
+  if (doYouWantNumbers === false) {
+    alert("No numbers will be added to password");
+    console.log('No Numbers added', passwordArray);
+  }
+
+  if (doYouWantSpecialChar === false) {
+    alert("No special characters will be added to password");
+    console.log('No SpecialChar added', passwordArray);
+  }
+
+  if (doYouWantLowercase === false) {
+    alert("No lowercase characters will be added to password");
+    console.log('No Lowercase added', passwordArray);
+  }
+
+  if (doYouWantUppercase === false) {
+    alert("No uppercase characters will be added to password");
+    console.log('No Uppercase added', passwordArray);
+  }
+
+
   // Randomize passwordArray
   var randomizedPasswordArray = passwordArray.sort(() => {
     return Math.random() - Math.random()
@@ -75,5 +96,5 @@ function generatePassword() {
 
 }
 
-// Add event listener to generate button
+// Add event listener to button to generate password
 generateBtn.addEventListener("click", writePassword);
